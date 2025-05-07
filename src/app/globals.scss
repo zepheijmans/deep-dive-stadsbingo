@@ -13,6 +13,7 @@
 * {
   box-sizing: border-box;
   user-select: none;
+  -webkit-tap-highlight-color: transparent !important;
 }
 
 @theme inline {
