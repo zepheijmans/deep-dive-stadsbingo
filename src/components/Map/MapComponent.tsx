@@ -10,9 +10,9 @@ const UserLocationMarker = () => {
   const [position, setPosition] = useState<[number, number] | null>(null);
 
   useEffect(() => {
-    if (!navigator.geolocation) return;
-
     const updatePosition = () => {
+      if (!navigator.geolocation) return;
+
       navigator.geolocation.getCurrentPosition(
         (pos) => {
           setPosition([pos.coords.latitude, pos.coords.longitude]);
