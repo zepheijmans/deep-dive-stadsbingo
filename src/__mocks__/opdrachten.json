@@ -1,8 +1,9 @@
 [
   {
+    "id": 1,
     "title": "Museum",
     "imageUrl": "/images/Museum.png",
-    "description": "Het Groninger Museum is een iconisch gebouw met een unieke architectuur en een rijke collectie kunst.",
+    "description": "Het Groninger Museum is een iconisch gebouw met een unieke architectuur en een rijke collectie kunst. Het museum is beroemd om zijn kleurrijke exterieur en biedt een breed scala aan tentoonstellingen, van moderne kunst tot historische artefacten.  Het museum is een must-see voor kunstliefhebbers en biedt ook educatieve programma's voor kinderen en volwassenen. Het ligt aan de rand van het stadscentrum, dicht bij het water, en is omgeven door een prachtig park waar bezoekers kunnen ontspannen en genieten van de natuur. Het museum heeft ook een café en een winkel waar bezoekers souvenirs en kunstgerelateerde artikelen kunnen kopen. Het is een ideale plek voor een dagje uit met het gezin of vrienden, en biedt een unieke kijk op de kunst- en cultuurgeschiedenis van Groningen en Nederland.",
     "assignments": [
       {
         "description": "Kijk goed naar het gebouw van het Groninger Museum en tel hoeveel kleuren je kunt ontdekken op de buitenkant.",
@@ -19,6 +20,7 @@
     ]
   },
   {
+    "id": 2,
     "title": "Prinsentuin",
     "imageUrl": "/images/Prinsentuin.png",
     "description": "De Prinsentuin is een prachtige renaissancetuin in het hart van Groningen, ideaal voor een rustige wandeling.",
@@ -38,6 +40,7 @@
     ]
   },
   {
+    "id": 3,
     "title": "Noorderplantsoen",
     "imageUrl": "/images/Noorderplantsoen.png",
     "description": "Het Noorderplantsoen is een groot stadspark waar natuur en recreatie samenkomen.",
@@ -57,6 +60,7 @@
     ]
   },
   {
+    "id": 4,
     "title": "Vismarkt",
     "imageUrl": "/images/Vismarkt.png",
     "description": "De Vismarkt is een historische markt in Groningen, bekend om zijn levendige sfeer en lokale producten.",
@@ -76,6 +80,7 @@
     ]
   },
   {
+    "id": 5,
     "title": "Forum",
     "imageUrl": "/images/Forum.png",
     "description": "Het Forum is een modern cultureel centrum met een bibliotheek, bioscoop en een panoramisch uitzicht over de stad.",
@@ -95,6 +100,7 @@
     ]
   },
   {
+    "id": 6,
     "title": "Diepenring",
     "imageUrl": "/images/Gracht.png",
     "description": "De Diepenring is een historische gracht die het oude stadscentrum van Groningen omringt.",

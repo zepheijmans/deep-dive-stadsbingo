@@ -1,15 +1,20 @@
 import Image from "next/image";
+import Link from "next/link";
 
 type CardProps = {
+  locationId: number;
   title: string;
   imageUrl: string;
   progress: string;
   locked?: boolean;
 };
 
-const Card = ({ title, imageUrl, progress, locked }: CardProps) => {
+const Card = ({ locationId, title, imageUrl, progress, locked }: CardProps) => {
   return (
-    <div className="relative flex flex-col items-center justify-center w-full h-62 overflow-hidden rounded-3xl">
+    <Link
+      href={`/view/${locationId}`}
+      className="relative flex flex-col items-center justify-center w-full h-62 overflow-hidden rounded-3xl"
+    >
       <Image
         src={imageUrl}
         alt="Museum"
@@ -25,7 +30,7 @@ const Card = ({ title, imageUrl, progress, locked }: CardProps) => {
       <span className="absolute bottom-3 right-3 text-lg font-semibold text-white">
         {progress}
       </span>
-    </div>
+    </Link>
   );
 };
 
