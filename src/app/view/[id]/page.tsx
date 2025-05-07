@@ -64,7 +64,7 @@ export default function ViewPage() {
         className="absolute w-screen h-[400px] top-0 left-0 object-cover object-center"
       />
 
-      <div className="relative mt-[375px] flex flex-col items-start justify-start w-full h-full p-4 space-y-4 rounded-t-3xl z-[10] bg-background overflow-hidden">
+      <div className="relative mt-[250px] flex flex-col items-start justify-start w-full h-full p-4 space-y-4 rounded-t-3xl z-[10] bg-background overflow-hidden">
         <div className="flex items-center justify-center w-full gap-4">
           <TabButton
             selected={selectedTab === 0}
