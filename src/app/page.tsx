@@ -1,11 +1,15 @@
+"use client";
+
 import Card from "@/components/Card";
 import { ScrollShadow } from "@heroui/scroll-shadow";
-import data from "@/__mocks__/opdrachten.json";
+import { useAssignments } from "@/context/AssignmentsContext";
 
 export default function Home() {
+  const { locations } = useAssignments();
+
   return (
     <ScrollShadow className="relative p-4 w-full h-full space-y-4">
-      {data.map((location, index) => (
+      {locations.map((location, index) => (
         <Card
           key={index}
           locationId={location.id}
@@ -16,6 +20,8 @@ export default function Home() {
             "/" +
             location.assignments.length
           }
+          inProgress={location.assignments.some((assignment) => assignment.completed)}
+          completed={location.assignments.every((assignment) => assignment.completed)}
         />
       ))}
 

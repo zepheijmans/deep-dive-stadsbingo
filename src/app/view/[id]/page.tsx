@@ -1,13 +1,15 @@
 "use client";
 
 import { useParams } from "next/navigation";
-import data from "@/__mocks__/opdrachten.json";
 import Image from "next/image";
 import { LuChevronLeft } from "react-icons/lu";
 import Link from "next/link";
 import { Button, PressEvent, ScrollShadow } from "@heroui/react";
 import { useState } from "react";
 import { Accordion, AccordionItem } from "@heroui/react";
+import { IoIosCheckmark } from "react-icons/io";
+import { useAssignments } from "@/context/AssignmentsContext";
+import clsx from "clsx";
 
 const TabButton = ({
   children,
@@ -31,7 +33,10 @@ const TabButton = ({
 
 export default function ViewPage() {
   const params = useParams<{ id: string }>();
-  const location = data.find((location) => location.id === parseInt(params.id));
+  const { locations, markAssignmentCompleted, markAssignmentIncomplete } = useAssignments();
+  const location = locations.find(
+    (location) => location.id === parseInt(params.id)
+  );
   const [selectedTab, setSelectedTab] = useState<number>(0);
 
   if (!location) {
@@ -60,7 +65,7 @@ export default function ViewPage() {
       />
 
       <div className="relative mt-[375px] flex flex-col items-start justify-start w-full h-full p-4 space-y-4 rounded-t-3xl z-[10] bg-background overflow-hidden">
-        <div className="flex items-center justify-start w-full gap-4">
+        <div className="flex items-center justify-center w-full gap-4">
           <TabButton
             selected={selectedTab === 0}
             onPress={() => setSelectedTab(0)}
@@ -85,14 +90,35 @@ export default function ViewPage() {
             </>
           ) : (
             <div>
-              <Accordion>
+              <Accordion variant="splitted">
                 {location.assignments.map((assignment, index) => (
                   <AccordionItem
                     key={index}
                     aria-label={`Opdracht ${index + 1}`}
                     title={`Opdracht ${index + 1}`}
+                    className={clsx(
+                      "bg-white rounded-3xl px-4",
+                      assignment.completed ? "bg-success-100" : "bg-white"
+                    )}
                   >
-                    {assignment.description}
+                    <div className="flex items-center w-full h-full pb-4 space-y-4 gap-4 items-center justify-center">
+                      <Button
+                        radius="full"
+                        size="sm"
+                        color={assignment.completed ? "success" : "default"}
+                        onPress={() =>
+                          assignment.completed
+                            ? markAssignmentIncomplete(location.id, assignment.id)
+                            : markAssignmentCompleted(location.id, assignment.id)
+                        }
+                        startContent={
+                          <IoIosCheckmark className="text-white w-12 h-12" />
+                        }
+                        isIconOnly
+                      />
+
+                      <p>{assignment.description}</p>
+                    </div>
                   </AccordionItem>
                 ))}
               </Accordion>

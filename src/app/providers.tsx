@@ -1,5 +1,6 @@
 "use client";
 
+import { AssignmentsProvider } from "@/context/AssignmentsContext";
 import { HeroUIProvider } from "@heroui/react";
 
 type ProvidersProps = {
@@ -7,7 +8,11 @@ type ProvidersProps = {
 };
 
 const Providers = ({ children }: ProvidersProps) => {
-  return <HeroUIProvider>{children}</HeroUIProvider>;
+  return (
+    <HeroUIProvider>
+      <AssignmentsProvider>{children}</AssignmentsProvider>
+    </HeroUIProvider>
+  );
 };
 
 export default Providers;

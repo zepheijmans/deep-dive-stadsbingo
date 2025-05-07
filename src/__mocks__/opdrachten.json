@@ -3,17 +3,22 @@
     "id": 1,
     "title": "Museum",
     "imageUrl": "/images/Museum.png",
-    "description": "Het Groninger Museum is een iconisch gebouw met een unieke architectuur en een rijke collectie kunst. Het museum is beroemd om zijn kleurrijke exterieur en biedt een breed scala aan tentoonstellingen, van moderne kunst tot historische artefacten.  Het museum is een must-see voor kunstliefhebbers en biedt ook educatieve programma's voor kinderen en volwassenen. Het ligt aan de rand van het stadscentrum, dicht bij het water, en is omgeven door een prachtig park waar bezoekers kunnen ontspannen en genieten van de natuur. Het museum heeft ook een café en een winkel waar bezoekers souvenirs en kunstgerelateerde artikelen kunnen kopen. Het is een ideale plek voor een dagje uit met het gezin of vrienden, en biedt een unieke kijk op de kunst- en cultuurgeschiedenis van Groningen en Nederland.",
+    "description": "Het Groninger Museum is een iconisch gebouw met een unieke architectuur en een rijke collectie kunst. Het museum is beroemd om zijn kleurrijke exterieur en biedt een breed scala aan tentoonstellingen, van moderne kunst tot historische artefacten. \tHet museum is een must-see voor kunstliefhebbers en biedt ook educatieve programma's voor kinderen en volwassenen. Het ligt aan de rand van het stadscentrum, dicht bij het water, en is omgeven door een prachtig park waar bezoekers kunnen ontspannen en genieten van de natuur. Het museum heeft ook een café en een winkel waar bezoekers souvenirs en kunstgerelateerde artikelen kunnen kopen. Het is een ideale plek voor een dagje uit met het gezin of vrienden, en biedt een unieke kijk op de kunst- en cultuurgeschiedenis van Groningen en Nederland.",
+    "latitude": 53.2122827,
+    "longitude": 6.5660781,
     "assignments": [
       {
+        "id": 1,
         "description": "Kijk goed naar het gebouw van het Groninger Museum en tel hoeveel kleuren je kunt ontdekken op de buitenkant.",
         "completed": false
       },
       {
+        "id": 2,
         "description": "Maak een foto van het museum en deel deze met je team.",
         "completed": false
       },
       {
+        "id": 3,
         "description": "Zoek uit wanneer het museum is gebouwd.",
         "completed": false
       }
@@ -24,16 +29,21 @@
     "title": "Prinsentuin",
     "imageUrl": "/images/Prinsentuin.png",
     "description": "De Prinsentuin is een prachtige renaissancetuin in het hart van Groningen, ideaal voor een rustige wandeling.",
+    "latitude": 53.219665788,
+    "longitude": 6.567997728,
     "assignments": [
       {
+        "id": 1,
         "description": "Tel hoeveel verschillende soorten bloemen je kunt vinden in de tuin.",
         "completed": false
       },
       {
+        "id": 2,
         "description": "Maak een schets van een deel van de tuin.",
         "completed": false
       },
       {
+        "id": 3,
         "description": "Zoek de geschiedenis van de Prinsentuin op.",
         "completed": false
       }
@@ -44,16 +54,21 @@
     "title": "Noorderplantsoen",
     "imageUrl": "/images/Noorderplantsoen.png",
     "description": "Het Noorderplantsoen is een groot stadspark waar natuur en recreatie samenkomen.",
+    "latitude": 53.2235503,
+    "longitude": 6.55476865679475,
     "assignments": [
       {
+        "id": 1,
         "description": "Vind een plek waar je vogels kunt observeren en noteer welke soorten je ziet.",
         "completed": false
       },
       {
+        "id": 2,
         "description": "Maak een wandeling door het park en meet de afstand.",
         "completed": false
       },
       {
+        "id": 3,
         "description": "Zoek uit welke evenementen vaak in het Noorderplantsoen worden gehouden.",
         "completed": false
       }
@@ -64,16 +79,21 @@
     "title": "Vismarkt",
     "imageUrl": "/images/Vismarkt.png",
     "description": "De Vismarkt is een historische markt in Groningen, bekend om zijn levendige sfeer en lokale producten.",
+    "latitude": 53.2172793,
+    "longitude": 6.5650751,
     "assignments": [
       {
+        "id": 1,
         "description": "Tel het aantal kraampjes dat op de markt staat.",
         "completed": false
       },
       {
+        "id": 2,
         "description": "Proef een lokale specialiteit en beschrijf de smaak.",
         "completed": false
       },
       {
+        "id": 3,
         "description": "Zoek uit hoe oud de Vismarkt is.",
         "completed": false
       }
@@ -84,16 +104,21 @@
     "title": "Forum",
     "imageUrl": "/images/Forum.png",
     "description": "Het Forum is een modern cultureel centrum met een bibliotheek, bioscoop en een panoramisch uitzicht over de stad.",
+    "latitude": 53.2189,
+    "longitude": 6.5703,
     "assignments": [
       {
+        "id": 1,
         "description": "Ga naar de bovenste verdieping en beschrijf het uitzicht.",
         "completed": false
       },
       {
+        "id": 2,
         "description": "Zoek een boek in de bibliotheek en noteer de titel.",
         "completed": false
       },
       {
+        "id": 3,
         "description": "Ontdek welke films momenteel in het Forum worden vertoond.",
         "completed": false
       }
@@ -104,16 +129,21 @@
     "title": "Diepenring",
     "imageUrl": "/images/Gracht.png",
     "description": "De Diepenring is een historische gracht die het oude stadscentrum van Groningen omringt.",
+    "latitude": 53.216622,
+    "longitude": 6.559359,
     "assignments": [
       {
+        "id": 1,
         "description": "Maak een boottocht over de Diepenring en beschrijf wat je ziet.",
         "completed": false
       },
       {
+        "id": 2,
         "description": "Tel het aantal bruggen dat je tegenkomt.",
         "completed": false
       },
       {
+        "id": 3,
         "description": "Zoek uit waarom de Diepenring is aangelegd.",
         "completed": false
       }

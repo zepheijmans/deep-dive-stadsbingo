@@ -30,3 +30,44 @@ body {
   --color-background: var(--background-light);
   --color-nav: #222629;
 }
+
+.map-container {
+  z-index: 10;
+  width: 100vw;
+  height: 100vh;
+
+  .leaflet-control-zoom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .25rem;
+    border: none !important;
+
+    .leaflet-control-zoom-in, .leaflet-control-zoom-out {
+      border-radius: 1rem !important;
+      @apply bg-nav text-white;
+    }
+  }
+
+  .leaflet-popup-content-wrapper, .leaflet-popup-tip {
+    @apply bg-nav text-white;
+  }
+
+  .leaflet-popup {
+    .leaflet-popup-content-wrapper {
+      border-radius: 32px !important;
+
+      .leaflet-popup-content {
+        text-align: center !important;
+      }
+    }
+
+    .leaflet-popup-close-button {
+      display: none !important;
+    }
+  }
+
+  .leaflet-control-attribution {
+    display: none !important;
+  }
+}
