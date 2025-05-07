@@ -3,12 +3,39 @@
 import Card from "@/components/Card";
 import { ScrollShadow } from "@heroui/scroll-shadow";
 import { useAssignments } from "@/context/AssignmentsContext";
+import { useEffect, useRef } from "react";
 
 export default function Home() {
   const { locations } = useAssignments();
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
+
+  // Save scroll position in local state
+  useEffect(() => {
+    const scrollContainer = scrollContainerRef.current;
+    if (!scrollContainer) return;
+
+    // Restore scroll position
+    const savedScrollPosition = sessionStorage.getItem("scrollPosition");
+    if (savedScrollPosition) {
+      scrollContainer.scrollTop = parseInt(savedScrollPosition, 10);
+    }
+
+    // Save scroll position on unmount
+    const handleScroll = () => {
+      sessionStorage.setItem("scrollPosition", scrollContainer.scrollTop.toString());
+    };
+    scrollContainer.addEventListener("scroll", handleScroll);
+
+    return () => {
+      scrollContainer.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
-    <ScrollShadow className="relative p-4 w-full h-full space-y-4">
+    <ScrollShadow
+      ref={scrollContainerRef}
+      className="relative p-4 w-full h-full space-y-4"
+    >
       {locations.map((location, index) => (
         <Card
           key={index}
