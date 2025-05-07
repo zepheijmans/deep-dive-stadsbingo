@@ -39,9 +39,9 @@ const UserLocationMarker = () => {
 
     updatePosition();
 
-    const intervalId = setInterval(updatePosition, 1000); // Update every second
+    // const intervalId = setInterval(updatePosition, 1000); // Update every second
 
-    return () => clearInterval(intervalId);
+    // return () => clearInterval(intervalId);
   }, []);
 
   if (!position) return null;
@@ -50,10 +50,10 @@ const UserLocationMarker = () => {
     <Marker
       position={position}
       icon={L.icon({
-        iconUrl: "/images/new-user-marker-icon.png",
-        iconSize: [25, 25],
-        iconAnchor: [12, 25],
-        popupAnchor: [1, -34],
+        iconUrl: "/images/user-marker-icon_new.png",
+        iconSize: [15, 15],
+        iconAnchor: [7.5, 7.5],
+        popupAnchor: [0, -15],
       })}
     >
       <Popup>Je bent hier</Popup>
@@ -81,10 +81,12 @@ const MapEvents = () => {
 
 const MapComponent = () => {
   const { locations } = useAssignments();
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [mapCenter, setMapCenter] = useState<[number, number]>(() => {
     const cachedCenter = localStorage.getItem("mapCenter");
     return cachedCenter ? JSON.parse(cachedCenter) : [53.2194, 6.5665]; // Default to Groningen
   });
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [mapZoom, setMapZoom] = useState<number>(() => {
     const cachedZoom = localStorage.getItem("mapZoom");
     return cachedZoom ? JSON.parse(cachedZoom) : 14; // Default zoom level
