@@ -68,12 +68,14 @@ const MapComponent = () => {
             key={location.id}
             position={[location.latitude, location.longitude]}
             icon={L.icon({
-              iconUrl: location.assignments.some(
+              iconUrl: location.assignments.every(
                 (assignment) => assignment.completed
               )
+                ? "/images/marker-success-icon.png"
+                : location.assignments.some(
+                    (assignment) => assignment.completed
+                  )
                 ? "/images/marker-warning-icon.png"
-                : location.assignments.every((assignment) => assignment.completed)
-                ? "/images/marker-complete-icon.png"
                 : "/images/marker-danger-icon.png",
               iconSize: [25, 25],
               iconAnchor: [12, 25],
@@ -83,14 +85,28 @@ const MapComponent = () => {
             <Popup>
               <h3 className="font-bold">{location.title}</h3>
 
-              {location.assignments.every((assignment) => assignment.completed) ? (
-                <p className="text-warning-300">
-                  Je hebt al {location.assignments.filter((assignment) => assignment.completed).length} van de {location.assignments.length} opdrachten voltooid!
+              {location.assignments.every(
+                (assignment) => assignment.completed
+              ) ? (
+                <p className="text-success-300">
+                  Je hebt alle opdrachten voltooid!
                 </p>
-              ) : location.assignments.some((assignment) => assignment.completed) ? (
-                <p className="text-success-300">Je hebt alle opdrachten voltooid!</p>
+              ) : location.assignments.some(
+                  (assignment) => assignment.completed
+                ) ? (
+                <p className="text-warning-300">
+                  Je hebt {" "}
+                  {
+                    location.assignments.filter(
+                      (assignment) => assignment.completed
+                    ).length
+                  }{" "}
+                  van de {location.assignments.length} opdrachten voltooid!
+                </p>
               ) : (
-                <p className="text-danger-300">Je hebt nog geen opdrachten voltooid :(</p>
+                <p className="text-danger-300">
+                  Je hebt nog geen opdrachten voltooid.
+                </p>
               )}
             </Popup>
           </Marker>
