@@ -1,13 +1,22 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import { Dispatch, SetStateAction, useEffect, useRef, useState } from "react";
+import {
+  MapContainer,
+  TileLayer,
+  Marker,
+  Popup,
+  useMapEvents,
+} from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import L from "leaflet";
 import { useAssignments } from "@/context/AssignmentsContext";
 
 const UserLocationMarker = () => {
-  const [position, setPosition] = useState<[number, number] | null>(null);
+  const [position, setPosition] = useState<[number, number] | null>(() => {
+    const cachedPosition = localStorage.getItem("userPosition");
+    return cachedPosition ? JSON.parse(cachedPosition) : null;
+  });
 
   useEffect(() => {
     const updatePosition = () => {
@@ -15,7 +24,12 @@ const UserLocationMarker = () => {
 
       navigator.geolocation.getCurrentPosition(
         (pos) => {
-          setPosition([pos.coords.latitude, pos.coords.longitude]);
+          const newPosition: [number, number] = [
+            pos.coords.latitude,
+            pos.coords.longitude,
+          ];
+          setPosition(newPosition);
+          localStorage.setItem("userPosition", JSON.stringify(newPosition));
         },
         (err) => {
           console.error("Error getting user location:", err);
@@ -25,9 +39,9 @@ const UserLocationMarker = () => {
 
     updatePosition();
 
-    const intervalId = setInterval(updatePosition, 1000); // Update every second
+    // const intervalId = setInterval(updatePosition, 1000); // Update every second
 
-    return () => clearInterval(intervalId);
+    // return () => clearInterval(intervalId);
   }, []);
 
   if (!position) return null;
@@ -47,16 +61,40 @@ const UserLocationMarker = () => {
   );
 };
 
+const MapEvents = () => {
+  const map = useMapEvents({
+    moveend: () => {
+      const center = map.getCenter();
+      const newCenter: [number, number] = [center.lat, center.lng];
+      console.log("Map center changed:", newCenter);
+      localStorage.setItem("mapCenter", JSON.stringify(newCenter));
+    },
+    zoomend: () => {
+      const zoom = map.getZoom();
+      console.log("Map zoom changed:", zoom);
+      localStorage.setItem("mapZoom", JSON.stringify(zoom));
+    },
+  });
+
+  return null;
+};
+
 const MapComponent = () => {
   const { locations } = useAssignments();
+  const [mapCenter, setMapCenter] = useState<[number, number]>(() => {
+    const cachedCenter = localStorage.getItem("mapCenter");
+    return cachedCenter ? JSON.parse(cachedCenter) : [53.2194, 6.5665]; // Default to Groningen
+  });
+  const [mapZoom, setMapZoom] = useState<number>(() => {
+    const cachedZoom = localStorage.getItem("mapZoom");
+    return cachedZoom ? JSON.parse(cachedZoom) : 14; // Default zoom level
+  });
 
   return (
     <div className="flex items-center justify-center min-h-screen">
-      <MapContainer
-        center={[53.2194, 6.5665]} // Centered on Groningen
-        zoom={14}
-        className="map-container"
-      >
+      <MapContainer center={mapCenter} zoom={mapZoom} className="map-container">
+        <MapEvents />
+
         <TileLayer
           // url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           url="https://service.pdok.nl/brt/achtergrondkaart/wmts/v2_0/standaard/EPSG:3857/{z}/{x}/{y}.png"
@@ -96,7 +134,7 @@ const MapComponent = () => {
                   (assignment) => assignment.completed
                 ) ? (
                 <p className="text-warning-300">
-                  Je hebt {" "}
+                  Je hebt{" "}
                   {
                     location.assignments.filter(
                       (assignment) => assignment.completed
