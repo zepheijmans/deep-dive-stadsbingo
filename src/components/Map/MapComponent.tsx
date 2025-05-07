@@ -6,10 +6,12 @@ import {
   TileLayer,
   Marker,
   Popup,
+  useMap,
   useMapEvents,
 } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import L from "leaflet";
+import { motion } from "framer-motion";
 import { useAssignments } from "@/context/AssignmentsContext";
 
 const UserLocationMarker = () => {
@@ -17,6 +19,12 @@ const UserLocationMarker = () => {
     const cachedPosition = localStorage.getItem("userPosition");
     return cachedPosition ? JSON.parse(cachedPosition) : null;
   });
+
+  const [rippleStyle, setRippleStyle] = useState<React.CSSProperties | null>(
+    null
+  );
+
+  const map = useMap();
 
   useEffect(() => {
     const updatePosition = () => {
@@ -38,26 +46,66 @@ const UserLocationMarker = () => {
     };
 
     updatePosition();
-
-    // const intervalId = setInterval(updatePosition, 1000); // Update every second
-
-    // return () => clearInterval(intervalId);
   }, []);
 
-  if (!position) return null;
+  useEffect(() => {
+    if (position) {
+      const updateRipplePosition = () => {
+        const point = map.latLngToContainerPoint(position); // Convert LatLng to container point
+        setRippleStyle({
+          position: "absolute",
+          left: `${point.x - 50}px`, // Center the ripple horizontally
+          top: `${point.y - 50}px`, // Center the ripple vertically
+          width: "100px",
+          height: "100px",
+          borderRadius: "50%",
+          backgroundColor: "rgba(0, 123, 255, 0.3)",
+          pointerEvents: "none",
+          zIndex: 1000,
+        });
+      };
+
+      updateRipplePosition();
+      map.on("move", updateRipplePosition);
+      map.on("zoom", updateRipplePosition);
+
+      return () => {
+        map.off("move", updateRipplePosition);
+        map.off("zoom", updateRipplePosition);
+      };
+    }
+  }, [position, map]);
+
+  if (!position || !rippleStyle) return null;
 
   return (
-    <Marker
-      position={position}
-      icon={L.icon({
-        iconUrl: "/images/user-marker-icon_new.png",
-        iconSize: [15, 15],
-        iconAnchor: [7.5, 7.5],
-        popupAnchor: [0, -15],
-      })}
-    >
-      <Popup>Je bent hier</Popup>
-    </Marker>
+    <>
+      {/* Animated Ripple Effect */}
+      <motion.div
+        style={rippleStyle}
+        animate={{
+          scale: [1, 2],
+          opacity: [0.5, 0],
+        }}
+        transition={{
+          duration: 2,
+          repeat: Infinity,
+        }}
+      />
+
+      {/* User Marker */}
+      <Marker
+        position={position}
+        icon={L.icon({
+          iconUrl: "/images/user-marker-icon_new.png",
+          iconSize: [15, 15],
+          iconAnchor: [7.5, 7.5],
+          popupAnchor: [0, -15],
+        })}
+      >
+        <Popup>Je bent hier</Popup>
+      </Marker>
+    </>
   );
 };
 
