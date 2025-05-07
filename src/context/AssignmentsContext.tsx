@@ -1,6 +1,6 @@
 "use client";
 
-import React, { createContext, useContext, useState } from "react";
+import React, { createContext, useContext, useState, useEffect } from "react";
 import initialData from "@/__mocks__/opdrachten.json";
 
 type Assignment = {
@@ -35,6 +35,19 @@ export const AssignmentsProvider = ({
   children: React.ReactNode;
 }) => {
   const [locations, setLocations] = useState<Location[]>(initialData);
+
+  useEffect(() => {
+    // Load from localStorage after the component mounts
+    const storedData = localStorage.getItem("locations");
+    if (storedData) {
+      setLocations(JSON.parse(storedData));
+    }
+  }, []);
+
+  useEffect(() => {
+    // Save locations to localStorage whenever it changes
+    localStorage.setItem("locations", JSON.stringify(locations));
+  }, [locations]);
 
   const markAssignmentCompleted = (
     locationId: number,
