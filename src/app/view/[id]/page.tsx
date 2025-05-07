@@ -7,7 +7,7 @@ import { LuChevronLeft } from "react-icons/lu";
 import Link from "next/link";
 import { Button, PressEvent, ScrollShadow } from "@heroui/react";
 import { useState } from "react";
-import {Accordion, AccordionItem} from "@heroui/react";
+import { Accordion, AccordionItem } from "@heroui/react";
 
 const TabButton = ({
   children,
@@ -85,13 +85,17 @@ export default function ViewPage() {
             </>
           ) : (
             <div>
-              {location.assignments.map((assignment, index) => (
-                // turn this into an accordion
-                <div
-                  key={index}
-                  className="flex items-center justify-between w-full p-4 bg-white rounded-3xl shadow-md"
-                ></div>
-              ))}
+              <Accordion>
+                {location.assignments.map((assignment, index) => (
+                  <AccordionItem
+                    key={index}
+                    aria-label={`Opdracht ${index + 1}`}
+                    title={`Opdracht ${index + 1}`}
+                  >
+                    {assignment.description}
+                  </AccordionItem>
+                ))}
+              </Accordion>
             </div>
           )}
         </ScrollShadow>
