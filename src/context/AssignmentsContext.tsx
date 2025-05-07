@@ -37,16 +37,33 @@ export const AssignmentsProvider = ({
   const [locations, setLocations] = useState<Location[]>(initialData);
 
   useEffect(() => {
-    // Load from localStorage after the component mounts
-    const storedData = localStorage.getItem("locations");
-    if (storedData) {
-      setLocations(JSON.parse(storedData));
+    // Load progress data from localStorage after the component mounts
+    const storedProgress = localStorage.getItem("progress");
+    if (storedProgress) {
+      const progress = JSON.parse(storedProgress);
+      setLocations((prevLocations) =>
+        prevLocations.map((location) => ({
+          ...location,
+          assignments: location.assignments.map((assignment) => ({
+            ...assignment,
+            completed: progress[location.id]?.[assignment.id] || false,
+          })),
+        }))
+      );
     }
   }, []);
 
   useEffect(() => {
-    // Save locations to localStorage whenever it changes
-    localStorage.setItem("locations", JSON.stringify(locations));
+    // Extract and save only progress data to localStorage whenever it changes
+    const progress = locations.reduce((acc, location) => {
+      acc[location.id] = location.assignments.reduce((locAcc, assignment) => {
+        locAcc[assignment.id] = assignment.completed;
+        return locAcc;
+      }, {} as Record<number, boolean>);
+      return acc;
+    }, {} as Record<number, Record<number, boolean>>);
+
+    localStorage.setItem("progress", JSON.stringify(progress));
   }, [locations]);
 
   const markAssignmentCompleted = (

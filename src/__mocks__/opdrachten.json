@@ -9,12 +9,12 @@
     "assignments": [
       {
         "id": 1,
-        "description": "Kijk goed naar het gebouw van het Groninger Museum en tel hoeveel kleuren je kunt ontdekken op de buitenkant.",
+        "description": "Maak een foto van je team voor het museum.",
         "completed": false
       },
       {
         "id": 2,
-        "description": "Maak een foto van het museum en deel deze met je team.",
+        "description": "Kijk goed naar het gebouw van het Groninger Museum en tel hoeveel kleuren je kunt ontdekken op de buitenkant.",
         "completed": false
       },
       {
@@ -34,17 +34,12 @@
     "assignments": [
       {
         "id": 1,
-        "description": "Tel hoeveel verschillende soorten bloemen je kunt vinden in de tuin.",
+        "description": "Maak een foto van je team in de tuin.",
         "completed": false
       },
       {
         "id": 2,
-        "description": "Maak een schets van een deel van de tuin.",
-        "completed": false
-      },
-      {
-        "id": 3,
-        "description": "Zoek de geschiedenis van de Prinsentuin op.",
+        "description": "De Prinsentuin voelt een beetje als een geheime tuin vol mooie planten, paden en doorkijkjes. Ga op zoek naar iets bijzonders dat niet meteen opvalt. Maak er een foto van.",
         "completed": false
       }
     ]
@@ -59,12 +54,12 @@
     "assignments": [
       {
         "id": 1,
-        "description": "Vind een plek waar je vogels kunt observeren en noteer welke soorten je ziet.",
+        "description": "Maak een foto van je team met het Noorderplantsoen op de achtergrond.",
         "completed": false
       },
       {
         "id": 2,
-        "description": "Maak een wandeling door het park en meet de afstand.",
+        "description": "Ga ergens in het plantsoen rustig staan of zitten. Sluit je ogen (optioneel) en luister 1 minuut lang aandachtig. Tel hoeveel verschillende geluiden je hoort (bijv. vogels, wind, honden, pratende mensen, verkeer, fietsen)..",
         "completed": false
       },
       {
@@ -78,23 +73,23 @@
     "id": 4,
     "title": "Vismarkt",
     "imageUrl": "/images/Vismarkt.png",
-    "description": "De Vismarkt is een historische markt in Groningen, bekend om zijn levendige sfeer en lokale producten.",
+    "description": "De Vismarkt is een historische markt in Groningen, bekend om zijn levendige sfeer en lokale producten.\nDe markt is een populaire plek voor zowel bewoners als toeristen en biedt een breed scala aan verse producten, waaronder vis, groenten, fruit en lokale specialiteiten. \nDe Vismarkt is ook omgeven door prachtige historische gebouwen en is een geweldige plek om te genieten van de sfeer van de stad. Het is een ideale plek voor een gezellige ochtendwandeling of om lokale lekkernijen te proeven.",
     "latitude": 53.2172793,
     "longitude": 6.5650751,
     "assignments": [
       {
         "id": 1,
-        "description": "Tel het aantal kraampjes dat op de markt staat.",
+        "description": "Maak een foto van je team met de Vismarkt op de achtergrond.",
         "completed": false
       },
       {
         "id": 2,
-        "description": "Proef een lokale specialiteit en beschrijf de smaak.",
+        "description": "Tel het aantal kraampjes dat op de markt staat.",
         "completed": false
       },
       {
         "id": 3,
-        "description": "Zoek uit hoe oud de Vismarkt is.",
+        "description": "Kijk goed om je heen op de markt en kies één ding uit dat begint met de letter V (zoals vis, vlag, vrachtfiets...). Maak er een foto van.",
         "completed": false
       }
     ]
@@ -103,18 +98,18 @@
     "id": 5,
     "title": "Forum",
     "imageUrl": "/images/Forum.png",
-    "description": "Het Forum is een modern cultureel centrum met een bibliotheek, bioscoop en een panoramisch uitzicht over de stad.",
+    "description": "Het Forum is een modern cultureel centrum met een bibliotheek, bioscoop en een panoramisch uitzicht over de stad.\nHet gebouw is ontworpen door het architectenbureau NL Architects en heeft een opvallende, futuristische uitstraling. Het Forum biedt een breed scala aan activiteiten, waaronder filmvertoningen, tentoonstellingen, lezingen en workshops.\nDe bibliotheek is een populaire ontmoetingsplek voor studenten en bewoners van Groningen, met een uitgebreide collectie boeken en digitale media. Het dakterras biedt een prachtig uitzicht over de stad en is een geweldige plek om te ontspannen of te genieten van een drankje.",
     "latitude": 53.2189,
     "longitude": 6.5703,
     "assignments": [
       {
         "id": 1,
-        "description": "Ga naar de bovenste verdieping en beschrijf het uitzicht.",
+        "description": "Ga naar de bovenste verdieping en maak een foto van je team, met het uitzicht van de stad op de achtergrond.",
         "completed": false
       },
       {
         "id": 2,
-        "description": "Zoek een boek in de bibliotheek en noteer de titel.",
+        "description": "Zoek een boek in de bibliotheek en maak er een foto van.",
         "completed": false
       },
       {
@@ -134,7 +129,7 @@
     "assignments": [
       {
         "id": 1,
-        "description": "Maak een boottocht over de Diepenring en beschrijf wat je ziet.",
+        "description": "Maak een foto van je team waarop jullie zichtbaar zijn met de gracht op de achtergrond.",
         "completed": false
       },
       {
@@ -145,6 +140,51 @@
       {
         "id": 3,
         "description": "Zoek uit waarom de Diepenring is aangelegd.",
+        "completed": false
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "title": "Martinitoren",
+    "imageUrl": "/images/Martinitoren.png",
+    "description": "De Martinitoren is de hoogste toren van Groningen en een belangrijk symbool van de stad.\nDe toren is gebouwd in de 15e eeuw en biedt een prachtig uitzicht over de stad vanaf de top.\nDe toren is ook bekend om zijn indrukwekkende klokken en het carillon dat regelmatig concerten geeft.\nHet is een populaire toeristische attractie en een must-see voor bezoekers van Groningen.",
+    "latitude": 53.21940205,
+    "longitude": 6.56819719545517,
+    "assignments": [
+      {
+        "id": 1,
+        "description": "Maak een foto van je team voor de Martinitoren.",
+        "completed": false
+      },
+      {
+        "id": 2,
+        "description": "De Martinitoren is hoog, maar hoe hoog precies? Maak een schatting.",
+        "completed": false
+      },
+      {
+        "id": 3,
+        "description": "Zoek uit hoeveel treden er naar de top van de toren leiden.",
+        "completed": false
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "title": "A-kerk",
+    "imageUrl": "/images/Akerk_2.png",
+    "description": "De A-kerk is een historische kerk in Groningen, bekend om zijn indrukwekkende architectuur en rijke geschiedenis.\nDe kerk is gebouwd in de 13e eeuw en heeft een prachtig interieur met mooie glas-in-loodramen en een indrukwekkend orgel. De A-kerk is een populaire plek voor concerten en culturele evenementen, en biedt ook ruimte voor tentoonstellingen en andere activiteiten. Het is een belangrijke culturele locatie in Groningen en trekt jaarlijks veel bezoekers.",
+    "latitude": 53.2168297,
+    "longitude": 6.56459111397479,
+    "assignments": [
+      {
+        "id": 1,
+        "description": "Maak een foto van je team voor de A-kerk.",
+        "completed": false
+      },
+      {
+        "id": 2,
+        "description": "De Akerk zit vol met oude details, ramen en stenen in allerlei vormen. Ga op zoek naar vormen in de architectuur, zoals een cirkel, vierkant, driehoek of rechthoek. Maak een foto van één van de vormen die je vindt.",
         "completed": false
       }
     ]
