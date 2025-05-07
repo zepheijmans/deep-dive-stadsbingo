@@ -39,9 +39,9 @@ const UserLocationMarker = () => {
 
     updatePosition();
 
-    // const intervalId = setInterval(updatePosition, 1000); // Update every second
+    const intervalId = setInterval(updatePosition, 1000); // Update every second
 
-    // return () => clearInterval(intervalId);
+    return () => clearInterval(intervalId);
   }, []);
 
   if (!position) return null;
