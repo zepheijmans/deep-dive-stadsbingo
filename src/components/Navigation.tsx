@@ -36,7 +36,7 @@ const Navigation = () => {
   const pathname = usePathname();
 
   return (
-    <div className="absolute bottom-4 left-0 w-full h-[70px] px-4 flex items-center justify-center z-[100]">
+    <div className="fixed bottom-4 left-0 w-full h-[70px] px-4 flex items-center justify-center z-[100]">
       <div className="p-2 bg-nav h-full rounded-full flex items-center justify-center gap-4">
         <NavigationItem
           link="/"
