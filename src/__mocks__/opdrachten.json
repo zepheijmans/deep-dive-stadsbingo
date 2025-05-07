@@ -1,0 +1,116 @@
+[
+  {
+    "title": "Museum",
+    "imageUrl": "/images/Museum.png",
+    "description": "Het Groninger Museum is een iconisch gebouw met een unieke architectuur en een rijke collectie kunst.",
+    "assignments": [
+      {
+        "description": "Kijk goed naar het gebouw van het Groninger Museum en tel hoeveel kleuren je kunt ontdekken op de buitenkant.",
+        "completed": false
+      },
+      {
+        "description": "Maak een foto van het museum en deel deze met je team.",
+        "completed": false
+      },
+      {
+        "description": "Zoek uit wanneer het museum is gebouwd.",
+        "completed": false
+      }
+    ]
+  },
+  {
+    "title": "Prinsentuin",
+    "imageUrl": "/images/Prinsentuin.png",
+    "description": "De Prinsentuin is een prachtige renaissancetuin in het hart van Groningen, ideaal voor een rustige wandeling.",
+    "assignments": [
+      {
+        "description": "Tel hoeveel verschillende soorten bloemen je kunt vinden in de tuin.",
+        "completed": false
+      },
+      {
+        "description": "Maak een schets van een deel van de tuin.",
+        "completed": false
+      },
+      {
+        "description": "Zoek de geschiedenis van de Prinsentuin op.",
+        "completed": false
+      }
+    ]
+  },
+  {
+    "title": "Noorderplantsoen",
+    "imageUrl": "/images/Noorderplantsoen.png",
+    "description": "Het Noorderplantsoen is een groot stadspark waar natuur en recreatie samenkomen.",
+    "assignments": [
+      {
+        "description": "Vind een plek waar je vogels kunt observeren en noteer welke soorten je ziet.",
+        "completed": false
+      },
+      {
+        "description": "Maak een wandeling door het park en meet de afstand.",
+        "completed": false
+      },
+      {
+        "description": "Zoek uit welke evenementen vaak in het Noorderplantsoen worden gehouden.",
+        "completed": false
+      }
+    ]
+  },
+  {
+    "title": "Vismarkt",
+    "imageUrl": "/images/Vismarkt.png",
+    "description": "De Vismarkt is een historische markt in Groningen, bekend om zijn levendige sfeer en lokale producten.",
+    "assignments": [
+      {
+        "description": "Tel het aantal kraampjes dat op de markt staat.",
+        "completed": false
+      },
+      {
+        "description": "Proef een lokale specialiteit en beschrijf de smaak.",
+        "completed": false
+      },
+      {
+        "description": "Zoek uit hoe oud de Vismarkt is.",
+        "completed": false
+      }
+    ]
+  },
+  {
+    "title": "Forum",
+    "imageUrl": "/images/Forum.png",
+    "description": "Het Forum is een modern cultureel centrum met een bibliotheek, bioscoop en een panoramisch uitzicht over de stad.",
+    "assignments": [
+      {
+        "description": "Ga naar de bovenste verdieping en beschrijf het uitzicht.",
+        "completed": false
+      },
+      {
+        "description": "Zoek een boek in de bibliotheek en noteer de titel.",
+        "completed": false
+      },
+      {
+        "description": "Ontdek welke films momenteel in het Forum worden vertoond.",
+        "completed": false
+      }
+    ]
+  },
+  {
+    "title": "Diepenring",
+    "imageUrl": "/images/Gracht.png",
+    "description": "De Diepenring is een historische gracht die het oude stadscentrum van Groningen omringt.",
+    "assignments": [
+      {
+        "description": "Maak een boottocht over de Diepenring en beschrijf wat je ziet.",
+        "completed": false
+      },
+      {
+        "description": "Tel het aantal bruggen dat je tegenkomt.",
+        "completed": false
+      },
+      {
+        "description": "Zoek uit waarom de Diepenring is aangelegd.",
+        "completed": false
+      }
+    ]
+  }
+]

@@ -5,6 +5,7 @@ import { JSX } from "react";
 import { RiHome5Line, RiHome5Fill, RiTrophyLine, RiTrophyFill, RiMap2Line, RiMap2Fill } from "react-icons/ri";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { motion } from "framer-motion";
 
 type NavigationItemProps = {
   link: string;
@@ -18,12 +19,15 @@ type NavigationItemProps = {
 const NavigationItem = ({ link, icon, isActive }: NavigationItemProps) => {
   return (
     <Link href={link}>
-      <div className={clsx(
-        "p-3 text-2xl w-14 h-14 rounded-full bg-nav flex items-center justify-center",
-        isActive ? "bg-white text-nav" : "bg-nav text-white",
-      )}>
+      <motion.div
+        whileTap={{ scale: 0.9 }}
+        className={clsx(
+          "p-3 text-2xl w-14 h-14 rounded-full bg-nav flex items-center justify-center",
+          isActive ? "bg-white text-nav" : "bg-nav text-white",
+        )}
+      >
         {isActive ? icon.active : icon.inactive}
-      </div>
+      </motion.div>
     </Link>
   );
 };
