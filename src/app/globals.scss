@@ -60,6 +60,9 @@ body {
 
       .leaflet-popup-content {
         text-align: center !important;
+        
+        p {
+          margin: 0 !important;}
       }
     }
 

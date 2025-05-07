@@ -13,6 +13,8 @@ import "leaflet/dist/leaflet.css";
 import L from "leaflet";
 import { motion } from "framer-motion";
 import { useAssignments } from "@/context/AssignmentsContext";
+import Link from "next/link";
+import { CgExpand } from "react-icons/cg";
 
 const UserLocationMarker = () => {
   const [position, setPosition] = useState<[number, number] | null>(() => {
@@ -46,6 +48,10 @@ const UserLocationMarker = () => {
     };
 
     updatePosition();
+
+    const intervalId = setInterval(updatePosition, 1000); // Updates every second
+
+    return () => clearInterval(intervalId);
   }, []);
 
   useEffect(() => {
@@ -172,6 +178,15 @@ const MapComponent = () => {
             })}
           >
             <Popup>
+              <Link
+                href={`/view/${location.id}`}
+                className="flex items-center justify-center w-full my-2"
+              >
+                <div className="p-2 bg-white rounded-full shadow-md">
+                  <CgExpand className="text-md text-nav" />
+                </div>
+              </Link>
+              
               <h3 className="font-bold">{location.title}</h3>
 
               {location.assignments.every(
