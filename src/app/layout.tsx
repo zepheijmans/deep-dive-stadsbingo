@@ -5,7 +5,7 @@ import Providers from "./providers";
 
 export const metadata: Metadata = {
   title: "Stadsbingo",
-  description: "Een interactieve bingo-app voor een introducie van de stad",
+  description: "Een interactieve bingo-app voor een introducie van de stad.",
 };
 
 export default function RootLayout({
