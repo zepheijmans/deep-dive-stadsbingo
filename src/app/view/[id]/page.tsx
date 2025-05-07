@@ -86,7 +86,7 @@ export default function ViewPage() {
               <h1 className="text-3xl font-semibold text-neutral-950">
                 {location.title}
               </h1>
-              <p className="text-lg text-neutral-950">{location.description}</p>
+              <p className="text-lg text-neutral-950 whitespace-pre-line">{location.description}</p>
             </>
           ) : (
             <div>

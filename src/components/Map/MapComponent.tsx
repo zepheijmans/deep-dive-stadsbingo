@@ -10,21 +10,24 @@ const UserLocationMarker = () => {
   const [position, setPosition] = useState<[number, number] | null>(null);
 
   useEffect(() => {
-    // if (!navigator.geolocation) return;
+    if (!navigator.geolocation) return;
 
-    if (!navigator.geolocation) {
-      setPosition([53.2194, 6.5665]);
-      return;
-    }
+    const updatePosition = () => {
+      navigator.geolocation.getCurrentPosition(
+        (pos) => {
+          setPosition([pos.coords.latitude, pos.coords.longitude]);
+        },
+        (err) => {
+          console.error("Error getting user location:", err);
+        }
+      );
+    };
 
-    navigator.geolocation.getCurrentPosition(
-      (pos) => {
-        setPosition([pos.coords.latitude, pos.coords.longitude]);
-      },
-      (err) => {
-        console.error("Error getting user location:", err);
-      }
-    );
+    updatePosition();
+
+    const intervalId = setInterval(updatePosition, 1000); // Update every second
+
+    return () => clearInterval(intervalId);
   }, []);
 
   if (!position) return null;
@@ -46,8 +49,6 @@ const UserLocationMarker = () => {
 
 const MapComponent = () => {
   const { locations } = useAssignments();
-
-  console.log(locations);
 
   return (
     <div className="flex items-center justify-center min-h-screen">

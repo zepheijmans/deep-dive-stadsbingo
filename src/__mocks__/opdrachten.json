@@ -1,9 +1,9 @@
 [
   {
     "id": 1,
-    "title": "Museum",
+    "title": "Groninger Museum",
     "imageUrl": "/images/Museum.png",
-    "description": "Het Groninger Museum is een iconisch gebouw met een unieke architectuur en een rijke collectie kunst. Het museum is beroemd om zijn kleurrijke exterieur en biedt een breed scala aan tentoonstellingen, van moderne kunst tot historische artefacten. \tHet museum is een must-see voor kunstliefhebbers en biedt ook educatieve programma's voor kinderen en volwassenen. Het ligt aan de rand van het stadscentrum, dicht bij het water, en is omgeven door een prachtig park waar bezoekers kunnen ontspannen en genieten van de natuur. Het museum heeft ook een café en een winkel waar bezoekers souvenirs en kunstgerelateerde artikelen kunnen kopen. Het is een ideale plek voor een dagje uit met het gezin of vrienden, en biedt een unieke kijk op de kunst- en cultuurgeschiedenis van Groningen en Nederland.",
+    "description": "Het Groninger Museum is een iconisch gebouw met een unieke, gedurfde architectuur die in de jaren '90 tot stand kwam, ontworpen door verschillende architecten zoals Alessandro Mendini. Het herbergt een rijke collectie kunst, variërend van moderne en hedendaagse kunst tot design en fotografie, en zelfs historische artefacten die de Groningse geschiedenis belichten.\n\nHet museum is beroemd om zijn kleurrijke en onconventionele exterieur en biedt een breed scala aan tentoonstellingen die regelmatig wisselen. \n\nHet is een must-see voor kunstliefhebbers en biedt ook educatieve programma's voor alle leeftijden. Gelegen aan de rand van het stadscentrum, dicht bij het Verbindingskanaal, is het museum omgeven door een parkachtige omgeving.\n\nNaast de tentoonstellingen beschikt het museum over een café en een winkel. De collectie omvat onder andere werk van lokale kunstenaars en internationale namen.\n\nHet is een ideale plek voor een cultureel uitje en biedt een unieke kijk op de kunst- en cultuurgeschiedenis van Groningen en Nederland.",
     "latitude": 53.2122827,
     "longitude": 6.5660781,
     "assignments": [
@@ -19,7 +19,7 @@
       },
       {
         "id": 3,
-        "description": "Zoek uit wanneer het museum is gebouwd.",
+        "description": "Zoek uit wanneer het museum in zijn huidige vorm is geopend.",
         "completed": false
       }
     ]
@@ -28,7 +28,7 @@
     "id": 2,
     "title": "Prinsentuin",
     "imageUrl": "/images/Prinsentuin.png",
-    "description": "De Prinsentuin is een prachtige renaissancetuin in het hart van Groningen, ideaal voor een rustige wandeling.",
+    "description": "De Prinsentuin, aangelegd in het begin van de 17e eeuw in opdracht van Willem Frederik van Nassau-Dietz, is een prachtig bewaard gebleven renaissancetuin in het hart van Groningen. Oorspronkelijk diende het waarschijnlijk als een privé-tuin, maar nu is het een openbare oase van rust.\n\nDeze formele tuin staat bekend om zijn symmetrische indeling, strak geschoren hagen en de rozentuin met vele geurende soorten. Er is ook een kruidentuin en een theehuisje dat dateert uit de 18e eeuw.\n\nDe Prinsentuin is ideaal voor een rustige wandeling, een moment van bezinning, of om te genieten van de historische sfeer en de groene omgeving midden in de stad.",
     "latitude": 53.219665788,
     "longitude": 6.567997728,
     "assignments": [
@@ -48,7 +48,7 @@
     "id": 3,
     "title": "Noorderplantsoen",
     "imageUrl": "/images/Noorderplantsoen.png",
-    "description": "Het Noorderplantsoen is een groot stadspark waar natuur en recreatie samenkomen.",
+    "description": "Het Noorderplantsoen is een groot stadspark dat in de 19e eeuw is aangelegd op de oude vestingwallen van Groningen. Het is ontworpen in de Engelse landschapsstijl, met slingerende paden, vijvers en glooiende gazons, wat contrasteert met de meer formele Prinsentuin.\n\nDit uitgestrekte park is een populaire plek waar natuur en recreatie samenkomen. Je ziet er mensen wandelen, joggen, picknicken en van de rust genieten. Er zijn ook verschillende monumenten en kunstwerken in het park te vinden.\n\nHet Noorderplantsoen is tevens een locatie voor diverse evenementen en festivals, waardoor het een levendige ontmoetingsplek is voor de stad.",
     "latitude": 53.2235503,
     "longitude": 6.55476865679475,
     "assignments": [
@@ -73,7 +73,7 @@
     "id": 4,
     "title": "Vismarkt",
     "imageUrl": "/images/Vismarkt.png",
-    "description": "De Vismarkt is een historische markt in Groningen, bekend om zijn levendige sfeer en lokale producten.\nDe markt is een populaire plek voor zowel bewoners als toeristen en biedt een breed scala aan verse producten, waaronder vis, groenten, fruit en lokale specialiteiten. \nDe Vismarkt is ook omgeven door prachtige historische gebouwen en is een geweldige plek om te genieten van de sfeer van de stad. Het is een ideale plek voor een gezellige ochtendwandeling of om lokale lekkernijen te proeven.",
+    "description": "De Vismarkt is een historische marktplaats in Groningen, die al eeuwenlang een centrale rol speelt in de handel van de stad. Oorspronkelijk was het inderdaad de plek waar voornamelijk vis werd verhandeld, direct aan de Reitdiep haven.\n\nDoor de tijd heen is de markt uitgegroeid tot een levendige plek waar nu een breed scala aan lokale producten wordt aangeboden, van verse etenswaren tot bloemen en andere waren. De omliggende panden, vaak met historische gevels, dragen bij aan de sfeervolle ambiance.\n\nDe Vismarkt is een populaire plek voor zowel bewoners als toeristen die de lokale cultuur willen proeven en de dynamiek van een traditionele markt willen ervaren.",
     "latitude": 53.2172793,
     "longitude": 6.5650751,
     "assignments": [
@@ -96,9 +96,9 @@
   },
   {
     "id": 5,
-    "title": "Forum",
+    "title": "Forum Groningen",
     "imageUrl": "/images/Forum.png",
-    "description": "Het Forum is een modern cultureel centrum met een bibliotheek, bioscoop en een panoramisch uitzicht over de stad.\nHet gebouw is ontworpen door het architectenbureau NL Architects en heeft een opvallende, futuristische uitstraling. Het Forum biedt een breed scala aan activiteiten, waaronder filmvertoningen, tentoonstellingen, lezingen en workshops.\nDe bibliotheek is een populaire ontmoetingsplek voor studenten en bewoners van Groningen, met een uitgebreide collectie boeken en digitale media. Het dakterras biedt een prachtig uitzicht over de stad en is een geweldige plek om te ontspannen of te genieten van een drankje.",
+    "description": "Het Forum Groningen is een modern cultureel centrum dat in 2019 zijn deuren opende. Het is ontworpen door het architectenbureau NL Architects en staat bekend om zijn opvallende, futuristische ontwerp dat de skyline van de stad verrijkt.\n\nBinnenin vind je een bibliotheek, meerdere bioscoopzalen, tentoonstellingsruimtes en horecagelegenheden. Een van de highlights is het dakterras met een panoramisch uitzicht over de stad.\n\nHet Forum is bedoeld als een dynamische plek voor ontmoeting, kennisdeling en cultuurbeleving voor alle inwoners en bezoekers van Groningen.",
     "latitude": 53.2189,
     "longitude": 6.5703,
     "assignments": [
@@ -123,7 +123,7 @@
     "id": 6,
     "title": "Diepenring",
     "imageUrl": "/images/Gracht.png",
-    "description": "De Diepenring is een historische gracht die het oude stadscentrum van Groningen omringt.",
+    "description": "De Diepenring is de gracht die het historische stadscentrum van Groningen omringt. Deze grachtenstructuur vindt zijn oorsprong in de middeleeuwen en maakte deel uit van de verdedigingswerken van de stad. In de loop der eeuwen verloor het zijn militaire functie en werd het een sfeervol onderdeel van het stadsbeeld.\n\nLangs de Diepenring staan veelal historische panden en er zijn diverse bruggen die de binnenstad verbinden met de omliggende gebieden. Tegenwoordig is het een geliefde plek voor wandelaars en fietsers.\n\nRondvaarten over de Diepenring bieden een mooi perspectief op de stad en haar geschiedenis.",
     "latitude": 53.216622,
     "longitude": 6.559359,
     "assignments": [
@@ -148,7 +148,7 @@
     "id": 7,
     "title": "Martinitoren",
     "imageUrl": "/images/Martinitoren.png",
-    "description": "De Martinitoren is de hoogste toren van Groningen en een belangrijk symbool van de stad.\nDe toren is gebouwd in de 15e eeuw en biedt een prachtig uitzicht over de stad vanaf de top.\nDe toren is ook bekend om zijn indrukwekkende klokken en het carillon dat regelmatig concerten geeft.\nHet is een populaire toeristische attractie en een must-see voor bezoekers van Groningen.",
+    "description": "De Martinitoren, met zijn wortels in de 15e eeuw, is de markante kerktoren van de Martinikerk en het onbetwiste symbool van Groningen. De toren heeft door de eeuwen heen verschillende gedaantes gekend na branden en verbouwingen. De beklimming van de toren biedt een weids uitzicht over de stad en de omgeving.\n\nDe toren is niet alleen een uitkijkpunt, maar herbergt ook een beroemd carillon waarvan de klanken regelmatig door de stad schallen. De 'Olle Grieze', zoals de toren in de volksmond wordt genoemd, is een belangrijk onderdeel van de Groningse identiteit.\n\nHet plein rondom de Martinitoren is vaak het toneel van evenementen en bijeenkomsten.",
     "latitude": 53.21940205,
     "longitude": 6.56819719545517,
     "assignments": [
@@ -173,7 +173,7 @@
     "id": 8,
     "title": "A-kerk",
     "imageUrl": "/images/Akerk_2.png",
-    "description": "De A-kerk is een historische kerk in Groningen, bekend om zijn indrukwekkende architectuur en rijke geschiedenis.\nDe kerk is gebouwd in de 13e eeuw en heeft een prachtig interieur met mooie glas-in-loodramen en een indrukwekkend orgel. De A-kerk is een populaire plek voor concerten en culturele evenementen, en biedt ook ruimte voor tentoonstellingen en andere activiteiten. Het is een belangrijke culturele locatie in Groningen en trekt jaarlijks veel bezoekers.",
+    "description": "De A-kerk, officieel de Der Aa-kerk genoemd, is een van de oudste gebouwen van Groningen, met delen die teruggaan tot de 13e eeuw. Door de eeuwen heen is de kerk uitgebreid en verbouwd, wat resulteerde in de gotische architectuur die we vandaag zien.\n\nHet interieur van de kerk is rijk aan historische elementen, waaronder prachtige gebrandschilderde ramen en een monumentaal orgel. Na een periode van herbestemming wordt de A-kerk nu gebruikt voor culturele evenementen, tentoonstellingen en soms nog voor kerkdiensten.\n\nDe A-kerk en haar omgeving vormen een belangrijk onderdeel van het historische hart van Groningen.",
     "latitude": 53.2168297,
     "longitude": 6.56459111397479,
     "assignments": [
