@@ -17,7 +17,7 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <Providers>
-          <div className="relative flex flex-col items-center justify-start min-h-screen overflow-hidden">
+        <div className="relative flex flex-col items-center justify-start h-screen max-h-screen overflow-y-scroll">
             {children}
 
             <Navigation />
