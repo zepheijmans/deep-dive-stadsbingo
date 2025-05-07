@@ -97,7 +97,7 @@ export default function ViewPage() {
                     aria-label={`Opdracht ${index + 1}`}
                     title={`Opdracht ${index + 1}`}
                     className={clsx(
-                      "bg-white rounded-3xl px-4",
+                      "bg-white rounded-3xl px-4 border-0 shadow-none",
                       assignment.completed ? "bg-success-100" : "bg-white"
                     )}
                   >
