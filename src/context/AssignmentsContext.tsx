@@ -70,6 +70,10 @@ export const AssignmentsProvider = ({
     locationId: number,
     assignmentId: number
   ) => {
+    console.log("Marking assignment as completed:", {
+      locationId,
+      assignmentId,
+    });
     setLocations((prevLocations) =>
       prevLocations.map((location) =>
         location.id === locationId
