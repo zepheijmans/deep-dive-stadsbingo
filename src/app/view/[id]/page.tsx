@@ -102,6 +102,8 @@ export default function ViewPage() {
                     )}
                   >
                     <div className="flex items-center w-full h-full pb-4 space-y-4 gap-4 items-center justify-center">
+                      <p>{assignment.description}</p>
+                      
                       <Button
                         radius="full"
                         size="sm"
@@ -116,8 +118,6 @@ export default function ViewPage() {
                         }
                         isIconOnly
                       />
-
-                      <p>{assignment.description}</p>
                     </div>
                   </AccordionItem>
                 ))}
