@@ -207,8 +207,13 @@
         "completed": false
       },
       {
-        "id": 3,
+        "id": 2,
         "description": "Zoek op het gebouw hoe oud het station is, maak er een foto van.",
+        "completed": false
+      },
+      {
+        "id": 3,
+        "description": "Maak een foto van teamgenoten die poseren op het Stadsbalkon, omhoog gericht vanuit de ondergrondse tunnel.",
         "completed": false
       }
     ]
