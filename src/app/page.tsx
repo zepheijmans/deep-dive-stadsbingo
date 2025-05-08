@@ -70,6 +70,8 @@ export default function Home() {
               completed={location.assignments.every(
                 (assignment) => assignment.completed
               )}
+              openingHours={location.openingHours}
+              closingHours={location.closingHours}
             />
           ))}
 

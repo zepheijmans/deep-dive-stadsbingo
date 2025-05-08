@@ -6,6 +6,7 @@ import Link from "next/link";
 
 import { RiProgress5Line } from "react-icons/ri";
 import { IoIosCheckmarkCircle } from "react-icons/io";
+import { formatTime, getOpeningTimes, isOpen, timeUntil } from "@/libs/location";
 
 type CardProps = {
   locationId: number;
@@ -14,19 +15,51 @@ type CardProps = {
   progress: string;
   inProgress?: boolean;
   completed?: boolean;
+  openingHours?: number;
+  closingHours?: number;
 };
 
-const Card = ({ locationId, title, imageUrl, progress, inProgress, completed }: CardProps) => {
+const Card = ({
+  locationId,
+  title,
+  imageUrl,
+  progress,
+  inProgress,
+  completed,
+  openingHours,
+  closingHours,
+}: CardProps) => {
   return (
     <Link
       href={`/view/${locationId}`}
       className="relative flex flex-col items-center justify-center w-full h-62 overflow-hidden rounded-3xl"
     >
-      <div className={clsx(
-        "absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-50",
-        inProgress && !completed && "bg-gradient-to-t from-warning-500 to-transparent",
-        completed && "bg-gradient-to-t from-success-500 to-transparent"
-      )}></div>
+      <div
+        className={clsx(
+          "absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-50",
+          inProgress &&
+            !completed &&
+            "bg-gradient-to-t from-warning-500 to-transparent",
+          completed && "bg-gradient-to-t from-success-500 to-transparent"
+        )}
+      ></div>
+
+      {openingHours && closingHours && isOpen(openingHours, closingHours) && (
+        <>
+          <div className="absolute top-3 right-3 bg-white text-black rounded-full px-2 py-1 text-sm font-semibold">
+            Nu geopend
+          </div>
+          <div className="absolute top-3 right-3 bg-warning-500 text-white rounded-full px-2 py-1 text-sm font-semibold">
+            Sluit om {getOpeningTimes(openingHours, closingHours).closingTime}
+          </div>
+        </>
+      )}
+
+      {openingHours && closingHours && !isOpen(openingHours, closingHours) && (
+        <div className="absolute top-3 right-3 bg-red-500 text-white rounded-full px-2 py-1 text-sm font-semibold">
+          Opent om {getOpeningTimes(openingHours, closingHours).openingTime}
+        </div>
+      )}
 
       {inProgress && !completed && (
         <RiProgress5Line className="absolute text-4xl text-white" />

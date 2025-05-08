@@ -16,6 +16,8 @@ type Location = {
   imageUrl: string;
   latitude: number;
   longitude: number;
+  openingHours?: number;
+  closingHours?: number;
   assignments: Assignment[];
 };
 
