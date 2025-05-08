@@ -120,12 +120,10 @@ const MapEvents = () => {
     moveend: () => {
       const center = map.getCenter();
       const newCenter: [number, number] = [center.lat, center.lng];
-      console.log("Map center changed:", newCenter);
       localStorage.setItem("mapCenter", JSON.stringify(newCenter));
     },
     zoomend: () => {
       const zoom = map.getZoom();
-      console.log("Map zoom changed:", zoom);
       localStorage.setItem("mapZoom", JSON.stringify(zoom));
     },
   });
@@ -146,9 +144,23 @@ const MapComponent = () => {
     return cachedZoom ? JSON.parse(cachedZoom) : 14; // Default zoom level
   });
 
+  // Define the bounding box for Groningen
+  const groningenBounds: L.LatLngBoundsExpression = [
+    [53.1, 6.4], // Southwest corner
+    [53.3, 6.8], // Northeast corner
+  ];
+
   return (
     <div className="flex items-center justify-center min-h-screen">
-      <MapContainer center={mapCenter} zoom={mapZoom} className="map-container">
+      <MapContainer
+        center={mapCenter}
+        zoom={mapZoom}
+        className="map-container"
+        maxBounds={groningenBounds}
+        maxBoundsViscosity={1.0}
+        minZoom={12}
+        maxZoom={16}
+      >
         <MapEvents />
 
         <TileLayer
@@ -186,7 +198,7 @@ const MapComponent = () => {
                   <CgExpand className="text-md text-nav" />
                 </div>
               </Link>
-              
+
               <h3 className="font-bold">{location.title}</h3>
 
               {location.assignments.every(
