@@ -6,7 +6,7 @@ import Link from "next/link";
 
 import { RiProgress5Line } from "react-icons/ri";
 import { IoIosCheckmarkCircle } from "react-icons/io";
-import { formatTime, getOpeningTimes, isOpen, timeUntil } from "@/libs/location";
+import { getOpeningTimes, isOpen } from "@/libs/location";
 
 type CardProps = {
   locationId: number;
